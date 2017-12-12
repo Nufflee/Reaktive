@@ -1,0 +1,10 @@
+{
+  "name": "reaktive",
+  "version": "0.0.1",
+  "description": "Simple tiny React reimplementation.",
+  "main": "index.js",
+  "repository": "https://github.com/Nufflee/Reaktive",
+  "author": "Nufflee",
+  "license": "MIT",
+  "private": false
+}
