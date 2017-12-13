@@ -1,3 +1,5 @@
-import Reaktive from './src/Reaktive'
+import { render } from './src/render'
 
-export default Reaktive
+export {
+  render
+}

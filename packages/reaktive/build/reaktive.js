@@ -70,18 +70,35 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_Reaktive__ = __webpack_require__("./src/Reaktive.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_Reaktive___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_Reaktive__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_render__ = __webpack_require__("./src/render.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return __WEBPACK_IMPORTED_MODULE_0__src_render__["a"]; });
 
 
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0__src_Reaktive___default.a);
+
 
 /***/ }),
 
-/***/ "./src/Reaktive.js":
-/***/ (function(module, exports) {
+/***/ "./src/render.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = render;
+function render(vnode, parent) {
+  let newParent;
 
+  if (typeof vnode === 'string' || typeof vnode === 'number') {
+    newParent = document.createTextNode(vnode);
+    parent.append(newParent);
+  } else {
+    newParent = document.createElement(vnode.elementName);
+    parent.append(newParent);
+
+    console.log(vnode);
+    for (let i = 0; i < vnode.children.length; i++) {
+      render(vnode.children[i], newParent);
+    }
+  }
+}
 
 /***/ })
 
