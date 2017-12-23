@@ -39,7 +39,8 @@ module.exports = {
               'babel-plugin-transform-inline-environment-variables',
               'babel-plugin-transform-class-properties',
               'babel-plugin-syntax-class-properties',
-              'babel-plugin-transform-object-rest-spread'
+              'babel-plugin-transform-object-rest-spread',
+              'babel-plugin-transform-jsx'
             ]
           }
         }],
